@@ -16,4 +16,4 @@
 
 [Download Simple APK](https://drive.google.com/file/d/1KPzNlBHc0R4G5q6MU6R-amH_tTNMSOdO/view?usp=sharing)
 
-![Simple App](https://user-images.githubusercontent.com/33791214/74653425-c3c79980-5190-11ea-8188-38e826cf2cb9.jpg)
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/33791214/74657739-8a475c00-5199-11ea-9625-edb517704ac6.gif)
