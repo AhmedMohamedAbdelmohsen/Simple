@@ -14,4 +14,4 @@
   <br>
 </p>
 
-![Simple App](https://user-images.githubusercontent.com/33791214/74652997-ee652280-518f-11ea-894a-b2d8630981db.png)
+![Simple App](https://user-images.githubusercontent.com/33791214/74653425-c3c79980-5190-11ea-8188-38e826cf2cb9.jpg)
