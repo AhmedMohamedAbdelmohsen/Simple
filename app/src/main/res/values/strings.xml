@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Simple</string>
+    <string name="_0">0</string>
+    <string name="equal">=</string>
+    <string name="plus">+</string>
+    <string name="ans">Ans</string>
+    <string name="dot">.</string>
+    <string name="minus">-</string>
 </resources>

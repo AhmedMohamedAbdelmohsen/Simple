@@ -7,61 +7,73 @@
 
     </data>
 
-    <RelativeLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/back_ground"
         tools:context=".MainActivity">
 
 
-        <LinearLayout
-            android:id="@+id/blacklayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="140dp"
             android:background="@drawable/shadow"
             android:orientation="vertical"
-            android:padding="10dp">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_isert"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="end"
-                android:hint="0"
-                android:maxLength="15"
-                android:padding="10dp"
-                android:scrollHorizontally="true"
-                android:textColor="@android:color/white"
-                android:textColorHint="@android:color/white"
-                android:textDirection="ltr"
-                android:textSize="30sp" />
+        <TextView
+            android:id="@+id/tv_insert"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:elevation="5dp"
+            android:gravity="right"
+            android:hint="@string/_0"
+            android:maxLength="15"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textDirection="ltr"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@id/view"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintTop_toTopOf="@id/view" />
 
-            <TextView
-                android:id="@+id/tv_result"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="end"
-                android:hint="0"
-                android:maxLength="15"
-                android:padding="10dp"
-                android:scrollHorizontally="true"
-                android:textColor="@android:color/white"
-                android:textColorHint="@android:color/white"
-                android:textDirection="ltr"
-                android:textSize="60sp" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:elevation="5dp"
+            android:gravity="right"
+            android:hint="@string/_0"
+            android:maxLength="15"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textDirection="ltr"
+            android:textSize="45sp"
+            app:layout_constraintEnd_toEndOf="@id/view"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintTop_toBottomOf="@id/tv_insert" />
 
         <GridLayout
             android:id="@+id/grid"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="220dp"
-            android:layout_marginRight="50dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="60dp"
             android:background="@drawable/back_ground_btn"
             android:columnCount="4"
@@ -69,7 +81,11 @@
             android:paddingTop="30dp"
             android:paddingRight="10dp"
             android:paddingBottom="30dp"
-            android:rowCount="5">
+            android:rowCount="5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/view"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintTop_toBottomOf="@id/tv_result">
 
             <Button
                 android:id="@+id/bt_clear"
@@ -311,21 +327,20 @@
                 android:text="+"
                 android:textColor="@color/bink"
                 android:textSize="32sp" />
-
-
         </GridLayout>
 
         <Button
             android:id="@+id/bt_equal"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
             android:layout_marginBottom="40dp"
             android:background="@drawable/back_ground_equal"
             android:elevation="10dp"
-            android:text="="
+            android:text="@string/equal"
             android:textColor="@android:color/white"
-            android:textSize="40sp" />
-    </RelativeLayout>
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/grid"
+            app:layout_constraintStart_toStartOf="@id/grid" />
+    </android.support.constraint.ConstraintLayout>
 </layout>

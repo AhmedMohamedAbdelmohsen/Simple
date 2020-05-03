@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         binding.btClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                binding.tvIsert.setText("");
+                binding.tvInsert.setText("");
                 binding.tvResult.setText("");
             }
         });
@@ -49,12 +49,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (checkBrackets == true){
-                    Process = binding.tvIsert.getText().toString();
-                    binding.tvIsert.setText(Process + ")");
+                    Process = binding.tvInsert.getText().toString();
+                    binding.tvInsert.setText(Process + ")");
                     checkBrackets = false;
                 }else {
-                    Process = binding.tvIsert.getText().toString();
-                    binding.tvIsert.setText(Process + "(");
+                    Process = binding.tvInsert.getText().toString();
+                    binding.tvInsert.setText(Process + "(");
                     checkBrackets = true;
                 }
             }
@@ -62,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
         binding.btPrecetage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Process = binding.tvIsert.getText().toString();
-                binding.tvIsert.setText(Process + "%");
+                Process = binding.tvInsert.getText().toString();
+                binding.tvInsert.setText(Process + "%");
             }
         });
         binding.btDelete.setOnClickListener(new View.OnClickListener() {
@@ -71,38 +71,38 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (Process.length() > 1) {
                     Process = Process.substring(0,Process.length() - 1);
-                    binding.tvIsert.setText(Process);
+                    binding.tvInsert.setText(Process);
                 } else if (Process.length() <= 1) {
-                    binding.tvIsert.setText("");
+                    binding.tvInsert.setText("");
                 }
             }
         });
         binding.btDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Process = binding.tvIsert.getText().toString();
-                binding.tvIsert.setText(Process + "÷");
+                Process = binding.tvInsert.getText().toString();
+                binding.tvInsert.setText(Process + "÷");
             }
         });
         binding.btMulti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Process = binding.tvIsert.getText().toString();
-                binding.tvIsert.setText(Process + "×");
+                Process = binding.tvInsert.getText().toString();
+                binding.tvInsert.setText(Process + "×");
             }
         });
         binding.btMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Process = binding.tvIsert.getText().toString();
-                binding.tvIsert.setText(Process + "-");
+                Process = binding.tvInsert.getText().toString();
+                binding.tvInsert.setText(Process + "-");
             }
         });
         binding.btPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Process = binding.tvIsert.getText().toString();
-                binding.tvIsert.setText(Process + "+");
+                Process = binding.tvInsert.getText().toString();
+                binding.tvInsert.setText(Process + "+");
                 //String plus = Process + "<font color='#F7467C'>+</font>";
                 //tvInsert.setText(Html.fromHtml(plus));
 
@@ -111,21 +111,21 @@ public class MainActivity extends AppCompatActivity {
         binding.btDot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Process = binding.tvIsert.getText().toString();
-                binding.tvIsert.setText(Process + ".");
+                Process = binding.tvInsert.getText().toString();
+                binding.tvInsert.setText(Process + ".");
             }
         });
         binding.btAns.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                binding.tvIsert.setText(finalResault);
+                binding.tvInsert.setText(finalResault);
                 binding.tvResult.setText("");
             }
         });
         binding.btEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Process = binding.tvIsert.getText().toString();
+                Process = binding.tvInsert.getText().toString();
                 Process = Process.replaceAll("×","*");
                 Process = Process.replaceAll("%","/100");
                 Process = Process.replaceAll("÷","/");
@@ -148,71 +148,71 @@ public class MainActivity extends AppCompatActivity {
         binding.bt0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Process = binding.tvIsert.getText().toString();
-                binding.tvIsert.setText(Process + "0");
+                Process = binding.tvInsert.getText().toString();
+                binding.tvInsert.setText(Process + "0");
             }
         });
         binding.bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Process = binding.tvIsert.getText().toString();
-                binding.tvIsert.setText(Process + "1");
+                Process = binding.tvInsert.getText().toString();
+                binding.tvInsert.setText(Process + "1");
             }
         });
         binding.bt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Process = binding.tvIsert.getText().toString();
-                binding.tvIsert.setText(Process + "2");
+                Process = binding.tvInsert.getText().toString();
+                binding.tvInsert.setText(Process + "2");
             }
         });
         binding.bt3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Process = binding.tvIsert.getText().toString();
-                binding.tvIsert.setText(Process + "3");
+                Process = binding.tvInsert.getText().toString();
+                binding.tvInsert.setText(Process + "3");
             }
         });
         binding.bt4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Process = binding.tvIsert.getText().toString();
-                binding.tvIsert.setText(Process + "4");
+                Process = binding.tvInsert.getText().toString();
+                binding.tvInsert.setText(Process + "4");
             }
         });
         binding.bt5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Process = binding.tvIsert.getText().toString();
-                binding.tvIsert.setText(Process + "5");
+                Process = binding.tvInsert.getText().toString();
+                binding.tvInsert.setText(Process + "5");
             }
         });
         binding.bt6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Process = binding.tvIsert.getText().toString();
-                binding.tvIsert.setText(Process + "6");
+                Process = binding.tvInsert.getText().toString();
+                binding.tvInsert.setText(Process + "6");
             }
         });
         binding.bt7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Process = binding.tvIsert.getText().toString();
-                binding.tvIsert.setText(Process + "7");
+                Process = binding.tvInsert.getText().toString();
+                binding.tvInsert.setText(Process + "7");
             }
         });
         binding.bt8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Process = binding.tvIsert.getText().toString();
-                binding.tvIsert.setText(Process + "8");
+                Process = binding.tvInsert.getText().toString();
+                binding.tvInsert.setText(Process + "8");
             }
         });
         binding.bt9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Process = binding.tvIsert.getText().toString();
-                binding.tvIsert.setText(Process + "9");
+                Process = binding.tvInsert.getText().toString();
+                binding.tvInsert.setText(Process + "9");
             }
         });
 
