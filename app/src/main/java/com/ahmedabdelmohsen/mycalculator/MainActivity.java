@@ -1,25 +1,15 @@
-package com.example.mycalculator;
+package com.ahmedabdelmohsen.mycalculator;
 
 import android.databinding.DataBindingUtil;
-import android.graphics.Color;
-import java.io.IOException;
+
 import org.mozilla.javascript.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import android.media.MediaPlayer;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Html;
-import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
-import android.view.SoundEffectConstants;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.TextView;
 
-import com.example.mycalculator.databinding.ActivityMainBinding;
+import com.ahmedabdelmohsen.mycalculator.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (checkBrackets == true){
+                if (checkBrackets == true) {
                     Process = binding.tvInsert.getText().toString();
                     binding.tvInsert.setText(Process + ")");
                     checkBrackets = false;
-                }else {
+                } else {
                     Process = binding.tvInsert.getText().toString();
                     binding.tvInsert.setText(Process + "(");
                     checkBrackets = true;
@@ -70,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (Process.length() > 1) {
-                    Process = Process.substring(0,Process.length() - 1);
+                    Process = Process.substring(0, Process.length() - 1);
                     binding.tvInsert.setText(Process);
                 } else if (Process.length() <= 1) {
                     binding.tvInsert.setText("");
@@ -126,10 +116,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Process = binding.tvInsert.getText().toString();
-                Process = Process.replaceAll("×","*");
-                Process = Process.replaceAll("%","/100");
-                Process = Process.replaceAll("÷","/");
-                Process = Process.replaceAll("\\(" ,"*(");
+                Process = Process.replaceAll("×", "*");
+                Process = Process.replaceAll("%", "/100");
+                Process = Process.replaceAll("÷", "/");
+                Process = Process.replaceAll("\\(", "*(");
 
 
                 Context rhino = Context.enter();
@@ -137,9 +127,9 @@ public class MainActivity extends AppCompatActivity {
 
                 try {
                     Scriptable scriptable = rhino.initStandardObjects();
-                    finalResault = rhino.evaluateString(scriptable,Process,
-                            "javascript",1,null).toString();
-                }catch (Exception e){
+                    finalResault = rhino.evaluateString(scriptable, Process,
+                            "javascript", 1, null).toString();
+                } catch (Exception e) {
                     finalResault = "0";
                 }
                 binding.tvResult.setText(finalResault);
@@ -215,7 +205,6 @@ public class MainActivity extends AppCompatActivity {
                 binding.tvInsert.setText(Process + "9");
             }
         });
-
 
 
     }
